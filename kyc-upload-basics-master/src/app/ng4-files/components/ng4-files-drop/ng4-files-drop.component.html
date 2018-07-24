@@ -1,0 +1,15 @@
+<ng-container>
+        <div class="filedropzone">
+                <a href="javascript:void(0)" (click)="file.click()" >
+                        Click to browse 
+                </a>
+                <label class="label">Drag your images here</label>
+        </div>
+        <div>
+                <input type="file"
+                class="ng4-files-upload-btn"
+                [multiple]="true"
+                #file
+                (change)="onChange(file.files); file.value=''" />
+        </div>
+</ng-container>

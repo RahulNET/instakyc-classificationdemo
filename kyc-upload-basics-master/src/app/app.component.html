@@ -1,0 +1,26 @@
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="text-align:center">
+    <a class="navbar-brand" href="#">INSIGHTS - Deep Learning based document recognition platform</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</header>
+<!-- Begin page content -->
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <ng4-files-drop (filesSelect)="fileSelect($event)">
+        </ng4-files-drop>
+    </div>
+  </div>
+  <div class="row form-group">
+	<div class="col-md-12 marginct">
+      <div class="card-deck">
+        <doc-card *ngFor="let file of files" [file]="file">
+        </doc-card>
+      </div>
+	</div>
+  </div>
+</main>
